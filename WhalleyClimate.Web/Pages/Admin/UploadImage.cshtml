@@ -1,0 +1,23 @@
+﻿@page
+@model WhalleyClimate.Web.Pages.Admin.UploadImageModel
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Roles = "Admin")]
+
+<h2>Upload Project Image</h2>
+
+@if (Model.UploadSuccess)
+{
+    <div class="alert alert-success">Image uploaded successfully.</div>
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="ImageFile" class="form-label">Choose image</label>
+        <input type="file" class="form-control" id="ImageFile" name="ImageFile" />
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description (optional)</label>
+        <textarea class="form-control" id="Description" name="Description" rows="2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
