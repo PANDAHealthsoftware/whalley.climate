@@ -1,0 +1,77 @@
+﻿@page "/services/air-conditioning"
+@using WhalleyClimateHosted.Client.Models
+
+<!-- 3) Overview section (scroll target = #overview) -->
+<section id="overview" class="tab-overview">
+  <div class="overview-container">
+    <div class="overview-text">
+      <h2>Air Conditioning Services</h2>
+      <p>
+          Professional air conditioning installation is a critical step, whether for your home or business. Expert installers carefully select the right system, position it for optimal performance, and ensure all components work seamlessly. In domestic settings, it guarantees comfort, energy efficiency, and clean indoor air. In commercial spaces, it’s essential for employee well-being and customer satisfaction. Proper installation prevents issues that can lead to costly repairs and inefficiency. By investing in professional installation, you not only enjoy immediate comfort but also save money in the long run through reduced energy bills and repairs.
+      </p>
+    </div>
+    <div class="overview-image">
+      <img src="/images/Domestic.jpg" alt="Air Conditioning Installation" />
+      <!-- ← your overview image -->
+    </div>
+  </div>
+</section>
+
+@code {
+    // For the tabs above, if you’re re‐using them
+    private int selectedIndex = 0;
+    private List<TabItem> Tabs { get; } = new()
+    {
+        new TabItem(
+            "Air Conditioning",                                  // Title
+            "Precision cooling for your home or business",       // Subtitle
+            "/images/service-ac-hero.jpg",                       // HeroImageUrl
+            "/services/air-conditioning",                        // ReadMoreUrl
+            "Air Conditioning Manchester & Cheshire",            // OverviewHeading
+            "At Domestic Air, our dedicated engineers service …",// OverviewText
+            "/services/air-conditioning",                        // OverviewLink
+            "/images/Domestic.jpg"                    // OverviewImageUrl
+        ),
+
+        new TabItem(
+            "Ventilation",
+            "Fresh air solutions for any space",
+            "/images/service-vent-hero.jpg",
+            "/services/ventilation",
+            "Creating Healthier Spaces",
+            "Expert ventilation installations to ensure clean …",
+            "/services/ventilation",
+            "/images/Domestic.jpg"
+        ),
+
+        new TabItem(
+            "Airzone",
+            "Smart zoning for maximum efficiency",
+            "/images/service-zone-hero.jpg",
+            "/services/airzone",
+            "Intelligent Zoning Control",
+            "Fine-tune the temperature in different rooms …",
+            "/services/airzone",
+            "/images/Domestic.jpg"
+        ),
+
+        new TabItem(
+            "Commercial",
+            "Heavy-duty HVAC for large projects",
+            "/images/service-com-hero.jpg",
+            "/services/commercial",
+            "Industrial & Commercial HVAC",
+            "Robust, large-scale climate control solutions …",
+            "/services/commercial",
+            "/images/Domestic.jpg"
+        )
+    };
+    
+    // You can re‐use your existing ProgressTiles or swap these out
+    private IEnumerable<ShowcaseItem> ProgressTiles => new[]
+    {
+        new ShowcaseItem("/images/condensers.jpg","Build progress","Main Plant Install","…"),
+        new ShowcaseItem("/images/ductwork.jpg","HVAC ducting","Ducting Complete","…"),
+        new ShowcaseItem("/images/team.jpg","Team onsite","Team On-Site","…")
+    };
+}

@@ -1,0 +1,91 @@
+﻿@page "/"
+@using WhalleyClimateHosted.Client.Models
+
+<Hero
+    BackgroundImage="@CurrentTab.HeroImageUrl"
+    Title="@CurrentTab.Title"
+    Subtitle="@CurrentTab.Subtitle"
+    ReadMoreUrl="@CurrentTab.ReadMoreUrl" />
+
+<RhombusNav Tabs="Tabs" @bind-ActiveIndex="selectedIndex" />
+
+<section id="overview" class="tab-overview">
+  <div class="overview-container">
+    <div class="overview-text">
+      <h2>@CurrentTab.OverviewHeading</h2>
+      <p>@CurrentTab.OverviewText</p>
+      <a class="learn-more" href="@CurrentTab.OverviewLink">Learn More →</a>
+    </div>
+    <div class="overview-image">
+      <img src="@CurrentTab.OverviewImageUrl" alt="@CurrentTab.Title" />
+    </div>
+  </div>
+</section>
+
+<Showcase Items="ProgressTiles" />
+
+@code {
+    private int selectedIndex = 0;
+
+    private List<TabItem> Tabs { get; } = new()
+    {
+        new TabItem(
+            Title: "Air Conditioning",
+            Subtitle: "Precision cooling for your home or business",
+            HeroImageUrl: "/images/hero-ac.jpg",
+            ReadMoreUrl: "/services/air-conditioning",
+            OverviewHeading: "Air Conditioning Manchester & Cheshire",
+            OverviewText: "We understand the importance of regular maintenance for air conditioning systems. Our engineers keep you cool when you need it most.",
+            OverviewLink: "/services/air-conditioning",
+            OverviewImageUrl: "/images/Domestic.jpg"
+        ),
+
+        new TabItem(
+            Title: "Ventilation",
+            Subtitle: "Fresh air solutions for any space",
+            HeroImageUrl: "/images/hero-ventilation.jpg",
+            ReadMoreUrl: "/services/ventilation",
+            OverviewHeading: "Creating Healthier Spaces",
+            OverviewText: "Expert ventilation installations to ensure clean, breathable air in homes and offices across Whalley.",
+            OverviewLink: "/services/ventilation",
+            OverviewImageUrl: "/images/ductwork.jpg"
+        ),
+
+        new TabItem(
+            Title: "Airzone",
+            Subtitle: "Smart zoning for maximum efficiency",
+            HeroImageUrl: "/images/hero-airzone.jpg",
+            ReadMoreUrl: "/services/airzone",
+            OverviewHeading: "Intelligent Zoning Control",
+            OverviewText: "Fine-tune the temperature in different rooms independently—with our Airzone systems you save energy and stay comfortable.",
+            OverviewLink: "/services/airzone",
+            OverviewImageUrl: "/images/air-conditioner-temperature-adjustment-with-remote-controller-room-home-scaled-1.jpg"
+        ),
+
+        new TabItem(
+            Title: "Commercial",
+            Subtitle: "Heavy-duty HVAC for large projects",
+            HeroImageUrl: "/images/hero-commercial.jpg",
+            ReadMoreUrl: "/services/commercial",
+            OverviewHeading: "Industrial & Commercial HVAC",
+            OverviewText: "Robust, large-scale climate control solutions for warehouses, offices and retail spaces throughout Lancashire.",
+            OverviewLink: "/services/commercial",
+            OverviewImageUrl: "/images/close-up-heat-pump-outside-home-1-scaled-1.jpg"
+        )
+    };
+
+    private TabItem CurrentTab =>
+        (selectedIndex >= 0 && selectedIndex < Tabs.Count)
+            ? Tabs[selectedIndex]
+            : Tabs[0];
+
+    private IEnumerable<ShowcaseItem> ProgressTiles => new[]
+    {
+        new ShowcaseItem("/images/heroes/hero-home.jpg","Build progress","Brew Dog Manchester",
+            "Superb modern bar project in Manchester centre."),
+        new ShowcaseItem("/images/heroes/lba-terminal-front.jpg","HVAC ducting","Leeds Bradford Airport",
+            "Secure install at an up and coming major hub."),
+        new ShowcaseItem("/images/heroes/Burnley_stadium_.png","Team onsite","Burnley Football Club",
+            "Up the Clarets!")
+    };
+}

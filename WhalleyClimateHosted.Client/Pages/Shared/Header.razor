@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+
+<header class="site-header">
+    <div class="header-inner container">
+        <a href="/" class="brand">
+            <img src="/images/logo.jpg" alt="Whalley Climate logo" />
+        </a>
+
+        <button class="toggle" @onclick="ToggleMenu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="site-nav @(isOpen ? "open" : "")">
+            <ul class="nav">
+                <li><NavLink href="/"        Match="NavLinkMatch.All">Home</NavLink></li>
+                <li><NavLink href="/services">Services</NavLink></li>
+                <li><NavLink href="/projects">Projects</NavLink></li>
+                <li><NavLink href="/about">About</NavLink></li>
+                <li><NavLink href="/contact">Contact</NavLink></li>
+            </ul>
+        </nav>
+
+        <div class="contact-links">
+            <a class="contact-item" href="tel:+441254230777">
+                <i class="fas fa-phone"></i>
+                <span>01254&nbsp;230777</span>
+            </a>
+            <a class="contact-item" href="mailto:enquiries@whalleyclimate.co.uk">
+                <i class="fas fa-envelope"></i>
+                <span>enquiries@whalleyclimate.co.uk</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+@code {
+    private bool isOpen;
+    private void ToggleMenu() => isOpen = !isOpen;
+}

@@ -1,0 +1,23 @@
+﻿@using WhalleyClimateHosted.Client.Models
+
+<section id="showcase" class="showcase">
+    <div class="container">
+        <h2>Recent Installations & Projects</h2>
+        <div class="grid fade">
+            @foreach (var item in Items)
+            {
+                <article class="card">
+                    <img src="@item.ImageUrl" alt="@item.AltText" />
+                    <div class="card-content">
+                        <h3>@item.Heading</h3>
+                        <p>@item.Description</p>
+                    </div>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter] public required IEnumerable<ShowcaseItem> Items { get; set; }
+}

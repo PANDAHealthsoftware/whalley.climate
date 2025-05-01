@@ -1,0 +1,19 @@
+﻿@* Shared/Hero.razor *@
+@using Microsoft.AspNetCore.Components
+
+<section class="hero-section" style="background-image: url('@BackgroundImage');">
+    <div class="overlay">
+        <h1>@Title</h1>
+        <p class="subtitle">@Subtitle</p>
+        <div class="hero-buttons">
+            <a class="btn-outline" href="@ReadMoreUrl">Read More</a>
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public string BackgroundImage { get; set; } = default!;
+    [Parameter, EditorRequired] public string Title           { get; set; } = default!;
+    [Parameter, EditorRequired] public string Subtitle        { get; set; } = default!;
+    [Parameter, EditorRequired] public string ReadMoreUrl     { get; set; } = default!;
+}
