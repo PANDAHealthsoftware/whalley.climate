@@ -1,39 +1,68 @@
-﻿@using Microsoft.AspNetCore.Components.Routing
+﻿@using System.Linq
+@using Microsoft.AspNetCore.Components.Routing
 
 <header class="site-header">
-    <div class="header-inner container">
-        <a href="/" class="brand">
-            <img src="/images/logo.jpg" alt="Whalley Climate logo" />
-        </a>
-
-        <button class="toggle" @onclick="ToggleMenu" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <nav class="site-nav @(isOpen ? "open" : "")">
-            <ul class="nav">
-                <li><NavLink href="/"        Match="NavLinkMatch.All">Home</NavLink></li>
-                <li><NavLink href="/services">Services</NavLink></li>
-                <li><NavLink href="/projects">Projects</NavLink></li>
-                <li><NavLink href="/about">About</NavLink></li>
-                <li><NavLink href="/contact">Contact</NavLink></li>
-            </ul>
-        </nav>
-
-        <div class="contact-links">
-            <a class="contact-item" href="tel:+441254230777">
-                <i class="fas fa-phone"></i>
-                <span>01254&nbsp;230777</span>
-            </a>
-            <a class="contact-item" href="mailto:enquiries@whalleyclimate.co.uk">
-                <i class="fas fa-envelope"></i>
-                <span>enquiries@whalleyclimate.co.uk</span>
-            </a>
-        </div>
+  <!-- WHITE TOP BAR -->
+  <div class="header-top container">
+    <a href="/" class="brand">
+      <img src="/images/logo.jpg" alt="Logo" />
+    </a>
+    <div class="contact-links">
+      <a href="tel:+441254230777" class="contact-item">
+        <i class="fas fa-phone"></i> 01254&nbsp;230777
+      </a>
+      <a href="mailto:enquiries@whalleyclimate.co.uk" class="contact-item">
+        <i class="fas fa-envelope"></i> enquiries@whalleyclimate.co.uk
+      </a>
     </div>
+    <button class="toggle" @onclick="ToggleMenu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- GREY NAV BAR -->
+  <div class="header-nav-wrapper">
+    <div class="container">
+      <!-- note: no longer class="container" on the nav itself -->
+      <nav class="header-nav @(isOpen ? "open" : "")">
+        <ul class="nav">
+          <li><NavLink href="/" Match="NavLinkMatch.All">Home</NavLink></li>
+
+          <li class="relative">
+            <button @onclick="ToggleServices">
+              Services <i class="fas fa-chevron-down @(servicesOpen ? "rotate-180" : "")"></i>
+            </button>
+            @if (servicesOpen)
+            {
+              <ul class="dropdown">
+                @foreach (var (svc, idx) in services.Select((s,i)=>(s,i)))
+                {
+                  <li><NavLink href="@svc.Href">@svc.Name</NavLink></li>
+                }
+              </ul>
+            }
+          </li>
+
+          <li><NavLink href="/projects">Projects &amp; Testimonials</NavLink></li>
+          <li><NavLink href="/about">About</NavLink></li>
+          <li><NavLink href="/contact">Contact Us</NavLink></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 
 @code {
-    private bool isOpen;
-    private void ToggleMenu() => isOpen = !isOpen;
+  private bool isOpen;
+  private void ToggleMenu() => isOpen = !isOpen;
+  private bool servicesOpen;
+  private void ToggleServices() => servicesOpen = !servicesOpen;
+
+  private (string Name, string Href)[] services = new[]
+  {
+    ("Air Conditioning","/services/air-conditioning"),
+    ("Refrigeration","/services/refrigeration"),
+    ("Design & Installation","/services/design-installation"),
+    ("Service & Maintenance","/services/service-maintenance")
+  };
 }

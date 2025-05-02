@@ -3,15 +3,15 @@ namespace WhalleyClimateHosted.Client.Models;
 
 public class ContactVm
 {
-    [Required, StringLength(80)]
+    [Required, MinLength(2)]
     public string Name { get; set; } = "";
 
     [Required, EmailAddress]
     public string Email { get; set; } = "";
 
-    [Phone]
-    public string? Phone { get; set; }
+    [Required, MinLength(4)]
+    public string Subject { get; set; } = "";
 
-    [Required, StringLength(2000)]
+    [Required, MinLength(10)]
     public string Message { get; set; } = "";
 }

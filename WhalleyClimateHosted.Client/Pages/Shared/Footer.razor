@@ -1,19 +1,60 @@
-﻿<footer class="site-footer">
-    <div class="container footer-grid">
-        <!-- your existing columns… -->
+﻿@using System.ComponentModel.DataAnnotations
+<div class="enquiry-section">
+  <div class="enquiry-container container">
+    <div class="enquiry-info">
+      <h2>Ongoing Support</h2>
+      <p>
+        As part of our highly versatile and responsive customer service,
+        Whalley Climate offers tailored contracts to maintain and service
+        air con or refrigeration equipment. Competitive pricing and a
+        dedication to 24-hour availability are just two of the ways we
+        make sense to keep us on call!
+      </p>
+      <p>
+        <strong>Call:</strong> 01254 230777<br />
+        <strong>Email:</strong>
+        <a href="mailto:enquiries@whalleyclimate.co.uk" class="contact-item">
+          enquiries@whalleyclimate.co.uk
+        </a>
+      </p>
     </div>
 
-    <!-- ==== NEW: partner/charity logos ==== -->
-    <div class="container footer-logos">
-        <h4>We’re proud to support</h4>
-        <div class="logo-list">
-            <img src="/images/logos/hfh-logo.jpg"       alt="Help For Heroes" />
-            <img src="/images/logos/hhcic.jpg"   alt="Healthier Heroes CIC" />
-            <!-- add/remove as needed -->
+    <div class="enquiry-form">
+      <h3>Make an Enquiry</h3>
+      <EditForm Model="model" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+          <InputText class="form-control" placeholder="Your Name" @bind-Value="model.Name" />
         </div>
-    </div>
+        <div class="form-group">
+          <InputText type="email" class="form-control" placeholder="Email Address" @bind-Value="model.Email" />
+        </div>
+        <div class="form-group">
+          <InputText class="form-control" placeholder="Phone Number" @bind-Value="model.Phone" />
+        </div>
+        <div class="form-group">
+          <InputTextArea class="form-control" placeholder="Your Message" @bind-Value="model.Message" />
+        </div>
 
-    <div class="container footer-bottom">
-        <p>© 2025 Whalley Climate. All rights reserved.</p>
+        <button type="submit" class="btn-submit">Submit form</button>
+      </EditForm>
     </div>
-</footer>
+  </div>
+</div>
+
+@code {
+  private EnquiryModel model = new();
+  private void HandleSubmit()
+  {
+    // your existing form-submit logic here
+  }
+  private class EnquiryModel
+  {
+    [Required] public string Name { get; set; }
+    [Required, EmailAddress] public string Email { get; set; }
+    public string Phone { get; set; }
+    [Required] public string Message { get; set; }
+  }
+}

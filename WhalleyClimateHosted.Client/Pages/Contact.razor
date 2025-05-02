@@ -1,12 +1,115 @@
 ﻿@page "/contact"
+@using WhalleyClimateHosted.Client.Models
+@inject HttpClient Http
 
-<Hero ImageUrl="images/heroes/hero-contact.jpg">
-    <Title>
-        Get&nbsp;in&nbsp;<span class="highlight">Touch</span>
-    </Title>
-</Hero>
+<section class="enquiry-section">
+  <div class="enquiry-container">
+    <!-- Left: Support Text -->
+    <div class="enquiry-info">
+      <h2>Ongoing Support</h2>
+      <p>
+        As part of our highly versatile and responsive customer service,  
+        Whalley Climate offers tailored contracts to maintain and service  
+        air con or refrigeration equipment. Competitive pricing and a  
+        dedication to 24-hour availability are just two of the ways we  
+        make it common sense to keep us on call!
+      </p>
+      <p>
+        Contact us to discuss our services in detail and for a free quote  
+        for climate control systems.
+      </p>
+      <p class="contact-details">
+        <strong>Call:</strong> 01254 230777<br />
+        <strong>Email:</strong> <a href="mailto:enquiries@whalleyclimate.co.uk">enquiries@whalleyclimate.co.uk</a>
+      </p>
+    </div>
 
-<section>
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@whalleyclimate.co.uk">info@whalleyclimate.co.uk</a></p>
+    <!-- Right: Enquiry Form -->
+    <div class="enquiry-form">
+      <h3>Make an Enquiry</h3>
+      <EditForm Model="form" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+          <InputText @bind-Value="form.Name" class="form-control" placeholder="Your Name" />
+          <ValidationMessage For="@(() => form.Name)" />
+        </div>
+
+        <div class="form-group">
+          <InputText @bind-Value="form.Email" class="form-control" placeholder="Email Address" />
+          <ValidationMessage For="@(() => form.Email)" />
+        </div>
+
+        <div class="form-group">
+          <InputText @bind-Value="form.Subject" class="form-control" placeholder="Phone Number" />
+          <ValidationMessage For="@(() => form.Subject)" />
+        </div>
+
+        <div class="form-group">
+          <InputTextArea @bind-Value="form.Message" class="form-control" placeholder="Your Message" rows="5" />
+          <ValidationMessage For="@(() => form.Message)" />
+        </div>
+
+        <small class="recaptcha-note">
+          This site is protected by reCAPTCHA and the Google  
+          <a href="https://policies.google.com/privacy">Privacy Policy</a>  
+          and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </small>
+
+        <button type="submit" class="btn-submit" disabled="@(isSubmitting)">
+          @(isSubmitting ? "Sending…" : "Submit form")
+        </button>
+      </EditForm>
+
+      @if (statusMessage is not null)
+      {
+        <div class="alert @(statusSucceeded ? "alert-success" : "alert-danger")">
+          @statusMessage
+        </div>
+      }
+    </div>
+  </div>
 </section>
+
+@code {
+  private ContactVm form = new();
+  private bool isSubmitting;
+  private bool statusSucceeded;
+  private string? statusMessage;
+
+  private async Task HandleValidSubmit()
+  {
+    isSubmitting = true;
+    statusMessage = null;
+
+    try
+    {
+      var data = new Dictionary<string,string>
+      {
+        ["name"]    = form.Name,
+        ["email"]   = form.Email,
+        ["subject"] = form.Subject,
+        ["message"] = form.Message
+      };
+      var resp = await Http.PostAsync("https://formspree.io/f/xfywnwer",
+                       new FormUrlEncodedContent(data));
+
+      statusSucceeded = resp.IsSuccessStatusCode;
+      statusMessage   = statusSucceeded
+                        ? "Thanks! We’ve received your enquiry."
+                        : "Oops, something went wrong—please try again later.";
+
+      if (statusSucceeded) form = new ContactVm();
+    }
+    catch (Exception ex)
+    {
+      statusSucceeded = false;
+      statusMessage   = $"Error: {ex.Message}";
+    }
+    finally
+    {
+      isSubmitting = false;
+    }
+  }
+}
