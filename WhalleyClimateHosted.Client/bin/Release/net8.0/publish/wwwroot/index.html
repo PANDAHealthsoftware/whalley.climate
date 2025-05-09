@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhalleyClimateHosted.Client</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/app.css" />
+   <link href="WhalleyClimateHosted.Client.styles.css" rel="stylesheet" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+
+<body>
+<div id="app">
+    <svg class="loading-progress">
+        <circle r="40%" cx="50%" cy="50%"></circle>
+        <circle r="40%" cx="50%" cy="50%"></circle>
+    </svg>
+    <div class="loading-progress-text"></div>
+</div>
+<!-- Blazor & auth scripts -->
+<script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+<script src="_framework/blazor.webassembly.js"></script>
+
+
+<!-- Fade-in on scroll -->
+<script>
+    (function () {
+        const initFade = () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('show'); // reveal
+                        obs.unobserve(e.target);        // stop watching
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.fade')
+                .forEach(el => observer.observe(el));
+        };
+
+        // run now if DOM already loaded, otherwise after DOMContentLoaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initFade);
+        } else {
+            initFade();
+        }
+    })();
+</script>
+</body>
+</html>

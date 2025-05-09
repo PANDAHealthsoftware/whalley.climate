@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WhalleyClimateHosted.Client.props" />
+</Project>

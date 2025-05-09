@@ -1,0 +1,52 @@
+/* Shared/Header.razor.css */
+
+/* Make the header taller and space out items */
+.header-inner[b-6ncuu4xwpz] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;    /* top/bottom: 2rem  */
+    gap: 2rem;
+}
+
+/* Enlarged logo */
+.brand img[b-6ncuu4xwpz] {
+    height: 90px;
+    width: auto;
+}
+
+/* Nav links */
+.site-nav ul[b-6ncuu4xwpz] {
+    display: flex;
+    gap: 2rem;
+}
+.site-nav li a[b-6ncuu4xwpz] {
+    font-size: 1.25rem;  /* bigger text */
+    font-weight: 600;
+}
+
+/* Contact icons/text */
+.contact-item[b-6ncuu4xwpz] {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.contact-item i[b-6ncuu4xwpz] {
+    font-size: 1.75rem;
+}
+
+/* Hamburger (mobile) */
+.toggle[b-6ncuu4xwpz] {
+    font-size: 2rem;
+}
+
+/* Mobile adjustments (optional) */
+@media (max-width: 768px) {
+    .contact-links[b-6ncuu4xwpz] {
+        display: none;
+    }
+}

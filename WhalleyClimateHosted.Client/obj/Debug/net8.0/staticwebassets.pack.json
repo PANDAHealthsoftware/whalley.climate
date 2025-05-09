@@ -1,0 +1,145 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\obj\\Debug\\net8.0\\compressed\\wz8v7we5pk.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WhalleyClimateHosted.Client.styles.css",
+      "PackagePath": "staticwebassets\\WhalleyClimateHosted.Client.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\Domestic.jpg",
+      "PackagePath": "staticwebassets\\images\\Domestic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\IMG-20250211-WA0066-400x250.jpg",
+      "PackagePath": "staticwebassets\\images\\IMG-20250211-WA0066-400x250.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\air-conditioner-temperature-adjustment-with-remote-controller-room-home-scaled-1.jpg",
+      "PackagePath": "staticwebassets\\images\\air-conditioner-temperature-adjustment-with-remote-controller-room-home-scaled-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\chris2-400x250.jpg",
+      "PackagePath": "staticwebassets\\images\\chris2-400x250.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\close-up-heat-pump-outside-home-1-scaled-1.jpg",
+      "PackagePath": "staticwebassets\\images\\close-up-heat-pump-outside-home-1-scaled-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\condensers.jpg",
+      "PackagePath": "staticwebassets\\images\\condensers.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\ductwork.jpg",
+      "PackagePath": "staticwebassets\\images\\ductwork.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\hero-ac.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-ac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\hero-airzone.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-airzone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\hero-commercial.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-commercial.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\hero-ventilation.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-ventilation.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\heroes\\Burnley_stadium_.png",
+      "PackagePath": "staticwebassets\\images\\heroes\\Burnley_stadium_.png"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\heroes\\hero-home.jpg",
+      "PackagePath": "staticwebassets\\images\\heroes\\hero-home.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\heroes\\hero-projects.jpg",
+      "PackagePath": "staticwebassets\\images\\heroes\\hero-projects.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\heroes\\lba-terminal-front.jpg",
+      "PackagePath": "staticwebassets\\images\\heroes\\lba-terminal-front.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\logos\\hfh-logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logos\\hfh-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\logos\\hhcic.jpg",
+      "PackagePath": "staticwebassets\\images\\logos\\hhcic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\new4-400x250.jpg",
+      "PackagePath": "staticwebassets\\images\\new4-400x250.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\projects\\leeds-1.JPG",
+      "PackagePath": "staticwebassets\\images\\projects\\leeds-1.JPG"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\projects\\leeds-2.jpg",
+      "PackagePath": "staticwebassets\\images\\projects\\leeds-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\team.jpg",
+      "PackagePath": "staticwebassets\\images\\team.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\images\\water-gas-pipe-engineering-filtered-image-processed-vintage-effect-scaled-1.jpg",
+      "PackagePath": "staticwebassets\\images\\water-gas-pipe-engineering-filtered-image-processed-vintage-effect-scaled-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\simon_adm\\RiderProjects\\whalley.climate\\WhalleyClimateHosted.Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WhalleyClimateHosted.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WhalleyClimateHosted.Client.props",
+      "PackagePath": "build\\WhalleyClimateHosted.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WhalleyClimateHosted.Client.props",
+      "PackagePath": "buildMultiTargeting\\WhalleyClimateHosted.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WhalleyClimateHosted.Client.props",
+      "PackagePath": "buildTransitive\\WhalleyClimateHosted.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

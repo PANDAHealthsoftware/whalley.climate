@@ -1,0 +1,79 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = WhalleyClimateHosted.Client
+build_property.RootNamespace = WhalleyClimateHosted.Client
+build_property.ProjectDir = C:\Users\simon_adm\RiderProjects\whalley.climate\WhalleyClimateHosted.Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\simon_adm\RiderProjects\whalley.climate\WhalleyClimateHosted.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Contact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/DesignInstallation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduSW5zdGFsbGF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Projects.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/ServiceMaintenance.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZU1haW50ZW5hbmNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Services/AirConditioning.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXNcQWlyQ29uZGl0aW9uaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Shared/Hero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEhlcm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Shared/RhombusNav.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFJob21idXNOYXYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Shared/Showcase.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFNob3djYXNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon_adm/RiderProjects/whalley.climate/WhalleyClimateHosted.Client/Pages/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6ncuu4xwpz
